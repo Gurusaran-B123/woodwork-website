@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>Sri Vekkaliyamman Interiors | Interior Design & Custom Wood Works in Trichy</title>
+<meta name="description" content="Sri Vekkaliyamman Interiors - Premium interior design and custom wood works in Trichy. Modular kitchens, pooja rooms, wardrobes, furniture and complete home interiors. Call now for free consultation.">
+<meta name="keywords" content="interior design trichy, wood works trichy, modular kitchen trichy, pooja room design trichy, custom furniture trichy, wardrobe trichy, sri vekkaliyamman interiors, interior designer trichy, wooden furniture trichy">
+<meta name="author" content="S. Sathiyakeerthi">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Open Graph (for WhatsApp / Facebook sharing) -->
+<meta property="og:title" content="Sri Vekkaliyamman Interiors | Trichy">
+<meta property="og:description" content="Premium interior design and custom wood works in Trichy.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://yourwebsite.com">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <style>
+        :root {
+            --primary: #6b4f3b;
+            --secondary: #c8a97e;
+            --light: #f5f3ef;
+            --dark: #2f2f2f;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+        html { scroll-behavior: smooth; }
+        body { background: var(--light); color: var(--dark); }
+
+        header {
+            background-color: var(--light);
+            padding: 15px 5%;
+            position: fixed; width: 100%; top: 0; z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: 0px 0px 10px 10px;
+        }
+
+        nav { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+
+        nav h1 {
+            color: #6b4f3b;
+            font-size: clamp(1.2rem, 4vw, 1.8rem);
+            text-shadow: -1px -1px 0 gray, 1px -1px 0 rgb(211,161,161), -1px 1px 0 gray, 1px 1px 0 rgb(252,226,201);
+        }
+
+        nav ul { display: flex; list-style: none; gap: 20px; flex-wrap: wrap; }
+
+        nav a {
+            text-decoration: none; color: var(--dark); font-weight: 500;
+            font-size: clamp(0.8rem, 2.5vw, 1.5rem); transition: 0.3s;
+            
+        }
+        nav a:hover { box-shadow: none;color: #9C7B60; }
+
+        .hero {
+            height: 100vh; display: flex; justify-content: center; align-items: center;
+            text-align: center; padding: 20px; color: white;
+            background-color: #6b4f3b;
+            
+            background-repeat: no-repeat; background-size: 100% 100vh;
+            border-radius: 10px;
+        }
+
+        .hero h2 { font-size: clamp(1.6rem, 5vw, 3rem); margin-bottom: 35px; padding-top: 80px;}
+        .hero p  { max-width: 600px; margin: 0 auto 30px; padding-top: 5px;
+                   font-size: clamp(0.9rem, 2.5vw, 1.5rem); color: rgb(255,211,167);
+                   text-shadow: 5px 3px 2px rgba(0,0,0,0.5); }
+        .hero span { color: yellow; }
+
+        .btn {
+            padding: 12px 30px; background: var(--secondary); color: white;
+            border: none; cursor: pointer; border-radius:10px 0px 10px 0px; font-size: 1rem; transition: 0.3s;
+        }
+        
+
+        section { padding: 100px 5%; max-width: 1200px; margin: 0 auto; }
+
+        .about { display: flex; flex-wrap: wrap; gap: 40px; align-items: center; }
+        .about img { width: 100%; max-width: 500px; border-radius: 10px; }
+        .about-text { flex: 1; min-width: 250px; }
+        .about-text h2 {
+            color: var(--primary); font-size: clamp(1.4rem, 4vw, 2.2rem);
+            margin-bottom: 10px; letter-spacing: 4px; text-transform: uppercase;
+        }
+
+        .services { display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; }
+
+        .service-card {
+            background:  burlywood; padding: 30px; flex: 1 1 220px;color: white;
+            border-radius: 10px; transition: 0.4s; text-align: center; border:1px solid white;
+            box-shadow: 0px 0px 20px 5px gray;
+        }
+        .ser{
+            background-color:  #bcc7f0;
+        }
+
+        .service-card h3{
+            color: black;
+        }
+        .service-card:hover { transform: translateY(-10px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+
+        #gallery { background: #6b4f3b; text-align: center; }
+        #gallery h2 {
+            color: yellow; font-size: clamp(1.4rem, 4vw, 2.2rem);
+            margin-bottom: 10px; letter-spacing: 4px; text-transform: uppercase;
+        }
+
+        p.subtitle { color: peru; font-size: 14px; margin-bottom: 40px; letter-spacing: 2px; }
+
+        .slider-wrapper { width:100%; overflow: hidden; border: 2px solid peru; border-radius: 10px; }
+        .slider-track {
+            display: flex; gap: 20px;
+            animation: slideLeft 12s linear infinite; width: max-content;
+        }
+        .imgs { flex-shrink: 0; width: 280px; height: 350px; overflow: hidden; border-radius: 8px; border: 2px solid peru; }
+        .imgs img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
+        .imgs img:hover { transform: scale(1.08); }
+
+        @keyframes slideLeft {
+            0%   { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .contact { text-align: center; }
+        .contact h2 { color: var(--primary); margin-bottom: 15px; }
+        .contact p  { margin-bottom: 10px; }
+        .contact table { display: flex; text-align: center; justify-content: center; color: #6b4f3b; }
+
+        footer { text-align: center; padding: 20px; background: var(--primary); color: white; font-size: 0.9rem; }
+        .sakthi{height: 250px ;width: 200px ; border-radius: 10px;margin-bottom: 10px;}
+
+        @media (max-width: 600px) {
+            nav ul { display: none;} 
+            nav{display: flex;align-items: center;justify-content:start;}
+         
+              .hero .el{ margin-top: 60px;}            
+            .imgs { width: 220px; height: 280px; }
+            .hero h2 { margin: 0; padding: 0; }
+            .el { padding-bottom: 150px; }
+            section { padding: 80px 4%; }
+            header{padding: 10px; height: 50px;  background-color:rgba(245, 245, 245, 0.267);
+                border-radius: 0px;}
+            
+            
+            i{font-size:10px; }
+
+            
+            .ta { display: flex; justify-content: center; align-items: center; }
+            .about{
+                flex-direction: column-reverse;
+            }
+        }
+
+        .contact p { padding-left: 20px; }
+
+        .contact .box {
+            align-items: center; justify-content: center;
+            display: flex; flex-direction: column;
+            background-color: #f0ebe8;
+            box-shadow: -5px -5px 10px 3px gray;
+            margin-bottom: 10px; border-radius: 10px;
+        }
+
+        .contact table {
+            align-items: center; justify-content: center;
+            display: flex; flex-direction: column;
+            background-color: #f0ebe8;
+        
+            margin-bottom: 10px; border-radius: 10px;
+        }
+
+        .contact h2 {
+            color:var(--primary); font-size: 2.2rem;
+            margin-bottom: 10px; letter-spacing: 1px; text-transform: uppercase;
+        }
+        .about h2{color:var(--primary); font-size: 2.2rem;
+            margin-bottom: 20px; letter-spacing: 1px; text-transform: uppercase;}
+
+        .ser h2 {
+            color: yellow; font-size: 2.2rem;
+            margin-bottom: 20px; letter-spacing: 1px; text-transform: uppercase;
+            display: flex; justify-content: center; align-items: center;
+        }
+
+        .contact a { text-decoration: none; color: #6b4f3b; padding: 5px 50px; }
+
+        a:hover { color: rgb(115,87,238); box-shadow: 0 0 5px 5px rgb(201,201,201); border-radius: 5px 1px 5px 1px; }
+
+        .ta { display: flex; justify-content: center; align-items: center; }
+
+        .mysel{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            
+        }
+        .sakthi{
+            margin-right: 10px;
+        }
+
+        .hero, #services, #gallery {
+    max-width: 100%;
+}
+
+.abt{margin-left: 150px;}
+       
+      
+       .bold{
+        font-size: 2rem;
+       }
+       
+
+
+        /* ══ MODAL OVERLAY ══ */
+        .modal-overlay {
+            display: none;
+            position: fixed; inset: 0;
+            background: rgba(0,0,0,0.6);
+            z-index: 2000;
+            align-items: center; justify-content: center;
+            padding: 1rem;
+        }
+        .modal-overlay.active {
+            display: flex;
+            animation: fadeIn 0.25s ease;
+        }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+        .modal-box {
+            background: #fff; border-radius: 14px;
+            width: 100%; max-width: 430px; overflow: hidden;
+            box-shadow: 0 25px 60px rgba(0,0,0,0.35);
+            animation: slideUp 0.4s cubic-bezier(0.22,1,0.36,1);
+        }
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(40px) scale(0.95); }
+            to   { opacity: 1; transform: translateY(0) scale(1); }
+        }
+
+        .modal-header {
+            background: #5C3D1E; padding: 1.8rem 2rem 1.5rem; position: relative;
+        }
+        .modal-header h3 { color: #fff; font-size: 1.35rem; font-weight: 700; letter-spacing: 0.5px; }
+        .modal-header p  { color: rgba(255,255,255,0.6); font-size: 0.83rem; margin-top: 5px; padding-left: 0; margin-bottom: 0; }
+
+        .modal-close {
+            position: absolute; top: 14px; right: 16px;
+            background: rgba(255,255,255,0.15); border: none; color: #fff;
+            width: 30px; height: 30px; border-radius: 50%; cursor: pointer;
+            font-size: 1rem; display: flex; align-items: center; justify-content: center; transition: 0.2s;
+        }
+        .modal-close:hover { background: rgba(255,255,255,0.3); }
+
+        .modal-body { padding: 1.8rem 2rem 2rem; }
+
+        .form-group { margin-bottom: 1.15rem; }
+
+        .form-group label {
+            display: block; font-size: 0.73rem; font-weight: 600;
+            color: #9C7B60; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px;
+        }
+
+        .input-wrap { position: relative; }
+        .input-wrap .icon {
+            position: absolute; left: 12px; top: 50%;
+            transform: translateY(-50%); font-size: 14px; pointer-events: none;
+        }
+
+        .form-group input {
+            width: 100%; padding: 0.72rem 0.9rem 0.72rem 2.4rem;
+            border: 1.5px solid #E8DDD4; border-radius: 7px;
+            font-size: 0.92rem; color: #2C1A0E; background: #FAF6F0;
+            outline: none; transition: border-color 0.2s, box-shadow 0.2s;
+            font-family: 'Segoe UI', sans-serif;
+        }
+        .form-group input:focus {
+            border-color: #6b4f3b; background: #fff;
+            box-shadow: 0 0 0 3px rgba(107,79,59,0.12);
+        }
+        .form-group input.err-input { border-color: #e53935; box-shadow: 0 0 0 3px rgba(229,57,53,0.1); }
+        .form-group input::placeholder { color: #C4AFA5; }
+
+        .err-msg { font-size: 0.72rem; color: #e53935; margin-top: 3px; display: none; }
+        .err-msg.show { display: block; }
+
+        .submit-btn {
+            width: 100%; padding: 0.85rem; background: #5C3D1E; color: #fff;
+            border: none; border-radius: 7px; font-size: 0.95rem; font-weight: 600;
+            cursor: pointer; transition: background 0.2s, transform 0.15s;
+            margin-top: 0.3rem; letter-spacing: 0.4px; font-family: 'Segoe UI', sans-serif;
+        }
+        .submit-btn:hover { background: #8B5E3C; transform: translateY(-1px); }
+        .submit-btn:active { transform: translateY(0); }
+        .submit-btn.loading { opacity: 0.75; pointer-events: none; }
+
+        .spinner {
+            display: none; width: 16px; height: 16px;
+            border: 2px solid rgba(255,255,255,0.35); border-top-color: #fff;
+            border-radius: 50%; animation: spin 0.7s linear infinite; margin: 0 auto;
+        }
+        .submit-btn.loading .btn-label { display: none; }
+        .submit-btn.loading .spinner  { display: block; }
+        @keyframes spin { to { transform: rotate(360deg); } }
+
+        /* ══ THANK YOU POPUP ══ */
+        .ty-overlay {
+            display: none; position: fixed; inset: 0;
+            background: rgba(0,0,0,0.6); z-index: 3000;
+            align-items: center; justify-content: center; padding: 1rem;
+        }
+        .ty-overlay.active { display: flex; }
+
+        .ty-box {
+            background: #fff; border-radius: 14px; padding: 2.5rem 2rem;
+            text-align: center; max-width: 360px; width: 100%;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            animation: popIn 0.4s cubic-bezier(0.22,1,0.36,1);
+        }
+        @keyframes popIn {
+            from { opacity: 0; transform: scale(0.8); }
+            to   { opacity: 1; transform: scale(1); }
+        }
+
+        .ty-icon {
+            width: 72px; height: 72px; background: #e8f5e9; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            margin: 0 auto 1.2rem; font-size: 2.2rem;
+        }
+
+        .ty-box h2 { color: #5C3D1E; font-size: 1.55rem; margin-bottom: 0.5rem; }
+
+        .ty-box p {
+            color: #9C7B60; font-size: 0.88rem; line-height: 1.65;
+            margin-bottom: 1.5rem; padding-left: 0;
+        }
+
+        .ty-box .done-btn {
+            background: #5C3D1E; color: #fff; border: none;
+            padding: 0.75rem 2.5rem; border-radius: 7px;
+            font-size: 0.95rem; cursor: pointer; transition: background 0.2s;
+            font-family: 'Segoe UI', sans-serif;
+        }
+        .ty-box .done-btn:hover { background: #8B5E3C; }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <h1>Sri VekkaliyammaN</h1>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+    <div class="el">
+        <h2>Elegant Interiors &<span> Custom Wood Works</span></h2>
+        <p>We create luxurious, modern and handcrafted wooden interiors that transform your home into a masterpiece.</p>
+        <button class="btn" onclick="openModal('Get Free Consultation')">Get Free Consultation</button>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="about">
+    <img src="{{ url_for('static', filename='about.png') }}" alt="Interior Design " style="height: 300px;width: 300px;">
+    <div class="about-text">
+        <h2 class="abt">About Us</h2>
+        <p class="bold">"Sri Vekkaliyamman Interiors is a Trichy-based interior design and custom woodwork company. We create beautiful kitchens, wardrobes, pooja rooms, furniture and complete home interiors — designed for your lifestyle, built for a lifetime."</p>
+    </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="ser">
+    <h2>Our Services</h2>
+   <div class="services">
+    <div class="service-card"><img src="{{ url_for('static', filename='intdes.png') }}" alt="work 1" style="height:200px; width:250px;"><h3>Interior Design</h3><p>Modern and aesthetic interior solutions tailored to your lifestyle.</p></div>
+    <div class="service-card"><img src="{{ url_for('static', filename='cus.jpg') }}" alt="work 2" style="height:200px; width:250px;"><h3>Custom Furniture</h3><p>Handcrafted wooden furniture with premium finishing.</p></div>
+    <div class="service-card"><img src="{{ url_for('static', filename='pexels-houzlook-7515855.jpg') }}" alt="work 3" style="height:200px; width:250px;"><h3>Modular Kitchens</h3><p>Smart storage solutions with elegant wooden design.</p></div>
+    <div class="service-card"><img src="{{ url_for('static', filename='pooja.avif') }}" alt="work 4" style="height:200px; width:250px;"><h3>Pooja Room</h3><p>We design divine and peaceful Pooja Rooms with intricate wood carvings.</p></div>
+    <div class="service-card"><img src="{{ url_for('static', filename='wat.jpg') }}" alt="work 5" style="height:200px; width:250px;"><h3>Cupboard & Wardrobe</h3><p>Custom cupboards built for smart storage with stylish designs.</p></div>
+    <div class="service-card"><img src="{{ url_for('static', filename='door.jpg') }}" alt="work 6" style="height:200px; width:250px;"><h3>Door Fitting & Frames</h3><p>Solid wood and flush door fitting with precision frames.</p></div>
+    <div class="service-card"><img src="{{ url_for('static', filename='staircase.jpg') }}" alt="work 7" style="height:200px; width:250px;"><h3>Staircase</h3><p>Handcrafted wooden staircases designed to be your home's showpiece.</p></div>
+    <div class="service-card"><img src="{{ url_for('static', filename='show.jpg') }}" alt="work 8" style="height:200px; width:250px;"><h3>Showcase & Display Units</h3><p>Display your memories and collections in style.</p></div>
+    <div class="service-card"><img src="{{ url_for('static', filename='window_org.jpg') }}" alt="work 9" style="height:200px; width:250px;"><h3>Wood Windows</h3><p>Solid wood windows crafted for strength, beauty, and ventilation.</p></div>
+    <div class="service-card"><img src="{{ url_for('static', filename='other.png') }}" alt="work 10" style="height:200px; width:250px;"><h3>Plywood & Other Wood Works</h3><p>TV units, false ceilings, partition panels, loft works and more.</p></div>
+</div>
+
+</section>
+    
+<!-- GALLERY -->
+<section id="gallery">
+    <h2>Our Works</h2>
+    <p class="subtitle">— crafted with passion —</p>
+
+    <div id="carouselExampleControls" class="carousel slide " data-bs-ride="carousel">
+  <div class="carousel-inner ">
+    <div class="carousel-item active">
+      <img src="{{ url_for('static', filename='pexels-houzlook-7515855.jpg') }}" class="d-block w-100" alt="..." style="border: 3px solid gold;border-radius: 15px;height: 55vw; max-height: 550px; width: 100%; object-fit: cover;">
+    </div>
+    <div class="carousel-item">
+            <img src="{{ url_for('static', filename='pexels-houzlook-7515855.jpg') }}" class="d-block w-100" alt="..." style="border: 3px solid gold;border-radius: 15px;height: 55vw; max-height: 550px; width: 100%; object-fit: cover;">
+    </div>
+    <div class="carousel-item">
+          <img src="{{ url_for('static', filename='pexels-houzlook-7515855.jpg') }}" class="d-block w-100" alt="..." style="border: 3px solid gold;border-radius: 15px;height: 55vw; max-height: 550px; width: 100%; object-fit: cover;">
+    </div>
+  </div>
+
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon bg-dark" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+</button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon bg-dark" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+</button>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <div class="box">
+        <h3>S. Sathiyakeerthi DME</h3>
+        <p>Interior Designer</p>
+     
+        <div class="mysel">
+        <img src="{{ url_for('static', filename='sakthi.jpeg') }}" alt="sakthi img" class="sakthi">
+         
+         <i>" Hi,I'm Sathiyakeerthi, founder of this company. With over 15years of <br>
+            hands-on experience in interior design and custom<br>
+             wood works, I personally oversee every project<br>
+              from first sketch to final finish."
+        </i>
+        </div>
+         
+  
+    <table border="0" cellspacing="20">
+                  
+        <tbody>
+            <tr>
+                <td class="ta">Address:</td>
+                <td class="ta"><a href="https://maps.app.goo.gl/UwwR3hWY4sCNVgfy6"><b>F.no 20, Nova Colony Pandamangalam, Woraiyur, Trichy-3</b></a></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <button class="btn" onclick="openModal('Book Appointment')"  style="margin-bottom: 5px; border: 1px solid rgb(56, 55, 55);"><b>Book Appointment</b></button>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 sri vekkaliyamman Interiors | All Rights Reserved</p>
+</footer>
+
+
+<!-- ══ CONTACT FORM MODAL ══ -->
+<div class="modal-overlay" id="modalOverlay">
+    <div class="modal-box">
+        <div class="modal-header">
+            <h3 id="modalTitle">Book Appointment</h3>
+            <p>Fill in your details — we'll contact you soon!</p>
+            <button class="modal-close" onclick="closeModal()">✕</button>
+        </div>
+        <div class="modal-body">
+
+            <div class="form-group">
+                <label>Full Name</label>
+                <div class="input-wrap">
+                    <span class="icon"><i class="bi bi-person"></i></span>
+                    <input type="text" id="f_name" placeholder="e.g. Ravi Kumar"/>
+                </div>
+                <span class="err-msg" id="nameErr">Please enter your full name.</span>
+            </div>
+
+            <div class="form-group">
+                <label>Phone Number</label>
+                <div class="input-wrap">
+                    <span class="icon"><i class="bi bi-telephone"></i></span>
+                    <input type="tel" id="f_phone" placeholder="e.g. 9876543210"/>
+                </div>
+                <span class="err-msg" id="phoneErr">Enter a valid 10-digit phone number.</span>
+            </div>
+
+            <div class="form-group">
+                <label>WhatsApp Number</label>
+                <div class="input-wrap">
+                    <span class="icon"><i class="bi bi-whatsapp"></i></span>
+                    <input type="tel" id="f_whatsapp" placeholder="Same as phone or different"/>
+                </div>
+                <span class="err-msg" id="whatsappErr">Enter a valid WhatsApp number.</span>
+            </div>
+
+            <button class="submit-btn" id="submitBtn" onclick="submitForm()">
+                <span class="btn-label">Send Request</span>
+                <span class="spinner"></span>
+            </button>
+
+        </div>
+    </div>
+</div>
+
+
+<!-- ══ THANK YOU POPUP ══ -->
+<div class="ty-overlay" id="tyOverlay">
+    <div class="ty-box">
+        <div class="ty-icon">✅</div>
+        <h2>Thank You, <span id="tyName"></span>!</h2>
+        <p>Your request has been received.<br>We will contact you shortly on<br>WhatsApp or Phone.</p>
+        <button class="done-btn" onclick="closeThankyou()">Done</button>
+    </div>
+</div>
+
+
+<script>
+    // Open modal — sets title based on which button clicked
+    function openModal(type) {
+        document.getElementById('modalTitle').textContent = '📋 ' + type;
+        document.getElementById('modalOverlay').classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    // Close modal and reset
+    function closeModal() {
+        document.getElementById('modalOverlay').classList.remove('active');
+        document.body.style.overflow = '';
+        resetForm();
+    }
+
+    // Close when clicking dark overlay background
+    document.getElementById('modalOverlay').addEventListener('click', function(e) {
+        if (e.target === this) closeModal();
+    });
+
+    // Show thank you popup with user name
+    function showThankyou(name) {
+        document.getElementById('tyName').textContent = name;
+        document.getElementById('tyOverlay').classList.add('active');
+    }
+
+    // Close thank you popup
+    function closeThankyou() {
+        document.getElementById('tyOverlay').classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    // Reset form fields and errors
+    function resetForm() {
+        ['f_name', 'f_phone', 'f_whatsapp'].forEach(id => {
+            document.getElementById(id).value = '';
+            document.getElementById(id).classList.remove('err-input');
+        });
+        ['nameErr', 'phoneErr', 'whatsappErr'].forEach(id => {
+            document.getElementById(id).classList.remove('show');
+        });
+    }
+
+    // Clear error as user types
+    ['f_name', 'f_phone', 'f_whatsapp'].forEach(id => {
+        document.getElementById(id).addEventListener('input', () => {
+            document.getElementById(id).classList.remove('err-input');
+        });
+    });
+
+    // Show error helper
+    function showErr(inputId, errId) {
+        document.getElementById(inputId).classList.add('err-input');
+        document.getElementById(errId).classList.add('show');
+    }
+
+    // Validate all fields
+    function validate(name, phone, whatsapp) {
+        let valid = true;
+        const phoneRegex = /^\+?[\d\s\-]{10,}$/;
+
+        if (!name.trim()) {
+            showErr('f_name', 'nameErr');
+            valid = false;
+        }
+        if (!phoneRegex.test(phone)) {
+            showErr('f_phone', 'phoneErr');
+            valid = false;
+        }
+        if (!phoneRegex.test(whatsapp)) {
+            showErr('f_whatsapp', 'whatsappErr');
+            valid = false;
+        }
+        return valid;
+    }
+
+    // Submit form to Flask backend
+    async function submitForm() {
+        const name     = document.getElementById('f_name').value.trim();
+        const phone    = document.getElementById('f_phone').value.trim();
+        const whatsapp = document.getElementById('f_whatsapp').value.trim();
+
+        if (!validate(name, phone, whatsapp)) return;
+
+        const btn = document.getElementById('submitBtn');
+        btn.classList.add('loading');
+
+        try {
+            const res = await fetch('/submit', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ name, phone, whatsapp })
+            });
+
+            const data = await res.json();
+
+            if (res.ok) {
+                closeModal();
+                // Small delay so modal close animation finishes first
+                setTimeout(() => showThankyou(data.name), 250);
+            } else {
+                alert('Error: ' + (data.error || 'Something went wrong. Try again.'));
+            }
+
+        } catch (err) {
+            alert('Cannot connect to server. Make sure Flask is running!');
+        } finally {
+            btn.classList.remove('loading');
+        }
+    }
+</script>
+
+</body>
+</html>
