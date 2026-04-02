@@ -14,8 +14,9 @@ def get_db_connection():
         password=os.environ.get('MYSQLPASSWORD'),
         database=os.environ.get('MYSQLDATABASE'),
         port=int(os.environ.get('MYSQLPORT', 3306)),
-        ssl={'ssl': {}},
-        cursorclass=pymysql.cursors.DictCursor
+        # Remove the ssl line entirely for filess.io
+        cursorclass=pymysql.cursors.DictCursor,
+        connect_timeout=10
     )
 
 # ─── Create Table ─────────────────────────────────────────────────────────────
