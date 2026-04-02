@@ -6,6 +6,29 @@ import os
 
 app = Flask(__name__)
 
+def create_table():
+    try:
+        conn = get_db_connection()
+        cur = conn.cursor()
+        cur.execute("""
+            CREATE TABLE IF NOT EXISTS contacts (
+                id INT AUTO_INCREMENT PRIMARY KEY,
+                name VARCHAR(100) NOT NULL,
+                phone VARCHAR(20) NOT NULL,
+                whatsapp VARCHAR(20) NOT NULL,
+                created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+            )
+        """)
+        conn.commit()
+        cur.close()
+        conn.close()
+        print("Table ready!")
+    except Exception as e:
+        print(f"Table error: {e}")
+
+with app.app_context():
+    create_table()
+
 def get_db_connection():
     return pymysql.connect(
         host=os.environ.get('MYSQLHOST'),
