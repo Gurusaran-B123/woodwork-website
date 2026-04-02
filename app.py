@@ -6,6 +6,18 @@ import os
 
 app = Flask(__name__)
 
+# ─── Database Connection ──────────────────────────────────────────────────────
+def get_db_connection():
+    return pymysql.connect(
+        host=os.environ.get('MYSQLHOST'),
+        user=os.environ.get('MYSQLUSER'),
+        password=os.environ.get('MYSQLPASSWORD'),
+        database=os.environ.get('MYSQLDATABASE'),
+        port=int(os.environ.get('MYSQLPORT', 3306)),
+        cursorclass=pymysql.cursors.DictCursor
+    )
+
+# ─── Create Table ─────────────────────────────────────────────────────────────
 def create_table():
     try:
         conn = get_db_connection()
@@ -29,16 +41,7 @@ def create_table():
 with app.app_context():
     create_table()
 
-def get_db_connection():
-    return pymysql.connect(
-        host=os.environ.get('MYSQLHOST'),
-        user=os.environ.get('MYSQLUSER'),
-        password=os.environ.get('MYSQLPASSWORD'),
-        database=os.environ.get('MYSQLDATABASE'),
-        port=int(os.environ.get('MYSQLPORT', 3306)),
-        cursorclass=pymysql.cursors.DictCursor
-    )
-
+# ─── Telegram ─────────────────────────────────────────────────────────────────
 TELEGRAM_TOKEN = os.environ.get("TELEGRAM_TOKEN")
 TELEGRAM_CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID")
 
@@ -65,6 +68,7 @@ def send_telegram_to_admin(name, phone, whatsapp):
     except Exception as e:
         print(f"Telegram failed: {e}")
 
+# ─── Routes ───────────────────────────────────────────────────────────────────
 @app.route('/')
 def index():
     return render_template('index.html')
