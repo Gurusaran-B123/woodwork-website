@@ -28,7 +28,7 @@
 
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
         html { scroll-behavior: smooth; }
-        body { background: var(--light); color: var(--dark); }
+        body { background: var(--light); color: var(--dark);  overflow-x: hidden;}
 
         header {
             background-color: var(--light);
@@ -50,7 +50,7 @@
 
         nav a {
             text-decoration: none; color: var(--dark); font-weight: 500;
-            font-size: clamp(0.8rem, 2.5vw, 1.5rem); transition: 0.3s;
+            font-size: clamp(0.8rem, 2.5vw, 1.5rem); transition: 0.3s;font-family: fantasy;
             
         }
         nav a:hover { box-shadow: none;color: #9C7B60; }
@@ -64,11 +64,27 @@
             border-radius: 10px;
         }
 
-        .hero h2 { font-size: clamp(1.6rem, 5vw, 3rem); margin-bottom: 35px; padding-top: 80px;}
+        .hero h2 { font-size: clamp(1.6rem, 5vw, 3rem);font-family: fantasy;
+             margin-bottom: 35px;
+             padding-top: 80px;animation-name: change;animation-duration: 2s;}
+
+         @keyframes change{from{transform: translateY(-300px);}
+        to {transform: translateY(0px)}}    
+
         .hero p  { max-width: 600px; margin: 0 auto 30px; padding-top: 5px;
                    font-size: clamp(0.9rem, 2.5vw, 1.5rem); color: rgb(255,211,167);
-                   text-shadow: 5px 3px 2px rgba(0,0,0,0.5); }
-        .hero span { color: yellow; }
+                   text-shadow: 5px 3px 2px rgba(0,0,0,0.5);
+                animation-name:para;animation-duration: 2s;font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+             }
+
+                @keyframes para{from{transform: translateX(650px);}
+        to {transform: translateX(0px)}}
+        
+
+        .hero span { color: yellow;font-family: fantasy;
+        }
+
+
 
         .btn {
             padding: 12px 30px; background: var(--secondary); color: white;
@@ -80,7 +96,27 @@
 
         .about { display: flex; flex-wrap: wrap; gap: 40px; align-items: center; }
         .about img { width: 100%; max-width: 500px; border-radius: 10px; }
-        .about-text { flex: 1; min-width: 250px; }
+       .about-text {
+      
+    flex: 1;
+    min-width: 250px;
+    animation-name: text;
+    animation-duration: 2s;
+}
+
+
+
+@keyframes text {
+    from { opacity: 0; transform: translateY(100px); }
+    to   { opacity: 1; transform: translateY(0);    }
+}
+
+   
+
+
+
+
+
         .about-text h2 {
             color: var(--primary); font-size: clamp(1.4rem, 4vw, 2.2rem);
             margin-bottom: 10px; letter-spacing: 4px; text-transform: uppercase;
@@ -92,18 +128,26 @@
             background:  burlywood; padding: 30px; flex: 1 1 220px;color: white;
             border-radius: 10px; transition: 0.4s; text-align: center; border:1px solid white;
             box-shadow: 0px 0px 20px 5px gray;
+               animation-name:img;
+        animation-duration: 5s;
+    animation-iteration-count: infinite;
         }
+
+        @keyframes img{
+from{border: 1px solid white;}
+to{border: 1px solid black;}
+}
         .ser{
             background-color:  #bcc7f0;
         }
 
         .service-card h3{
-            color: black;
+            color: black;font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         }
-        .service-card:hover { transform: translateY(-10px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+        .service-card:hover {  box-shadow: 0 10px 25px rgba(0,0,0,0.1);transform: scale(1.1); }
 
         #gallery { background: #6b4f3b; text-align: center; }
-        #gallery h2 {
+        #gallery h2 {font-family: fantasy;
             color: yellow; font-size: clamp(1.4rem, 4vw, 2.2rem);
             margin-bottom: 10px; letter-spacing: 4px; text-transform: uppercase;
         }
@@ -115,8 +159,15 @@
             display: flex; gap: 20px;
             animation: slideLeft 12s linear infinite; width: max-content;
         }
-        .imgs { flex-shrink: 0; width: 280px; height: 350px; overflow: hidden; border-radius: 8px; border: 2px solid peru; }
-        .imgs img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
+        .imgs { flex-shrink: 0; width: 280px; height: 350px; overflow: hidden;
+             border-radius: 8px; border: 2px solid peru; }
+        .imgs img { width: 100%; height: 100%; object-fit:
+             cover; transition:
+             transform 0.4s ease;
+         
+ }
+ 
+   
         .imgs img:hover { transform: scale(1.08); }
 
         @keyframes slideLeft {
@@ -125,7 +176,7 @@
         }
 
         .contact { text-align: center; }
-        .contact h2 { color: var(--primary); margin-bottom: 15px; }
+        .contact h2 { color: var(--primary); margin-bottom: 15px;font-family: fantasy; }
         .contact p  { margin-bottom: 10px; }
         .contact table { display: flex; text-align: center; justify-content: center; color: #6b4f3b; }
 
@@ -145,8 +196,8 @@
                 border-radius: 0px;}
               .abt{display: flex;align-items: center;justify-content: center;}
        
-            
-            i{font-size:10px; }
+            .loc{font-size:10px; }
+           #gallery h2{font-size: 2rem;}
 
             
             .ta { display: flex; justify-content: center; align-items: center; }
@@ -155,7 +206,7 @@
             }
         }
 
-        .contact p { padding-left: 20px; }
+        .contact p { padding-left: 0px; }
 
         .contact .box {
             align-items: center; justify-content: center;
@@ -178,9 +229,9 @@
             margin-bottom: 10px; letter-spacing: 1px; text-transform: uppercase;
         }
         .about h2{color:var(--primary); font-size: 2.2rem;
-            margin-bottom: 20px; letter-spacing: 1px; text-transform: uppercase;}
+            margin-bottom: 20px; letter-spacing: 1px; text-transform: uppercase;font-family: fantasy;}
 
-        .ser h2 {
+        .ser h2 {font-family: fantasy;
             color: yellow; font-size: 2.2rem;
             margin-bottom: 20px; letter-spacing: 1px; text-transform: uppercase;
             display: flex; justify-content: center; align-items: center;
@@ -207,12 +258,16 @@
     max-width: 100%;
 }
 
-.abt{display: flex;justify-content: center;}
+     .abt{display: flex;justify-content: center;}
        
       
        .bold{
-        font-size: 1rem;
+        font-size: 1rem;font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: 550;
        }
+    .loc{font-family: cursive;}
+
+    
        
        
 
@@ -409,13 +464,13 @@
     <div id="carouselExampleControls" class="carousel slide " data-bs-ride="carousel">
   <div class="carousel-inner ">
     <div class="carousel-item active">
-      <img src="{{ url_for('static', filename='pexels-houzlook-7515855.jpg') }}" class="d-block w-100" alt="..." style="border: 3px solid gold;border-radius: 15px;height: 55vw; max-height: 550px; width: 100%; object-fit: cover;">
+      <img src="{{ url_for('static', filename='pexels-houzlook-7515855.jpg') }}" class="d-block w-100" alt="our works img1"   style="border: 3px solid gold;border-radius: 15px;height: 75vw; max-height: 560px; width: 100%; object-fit: cover;">
     </div>
     <div class="carousel-item">
-            <img src="{{ url_for('static', filename='pexels-houzlook-7515855.jpg') }}" class="d-block w-100" alt="..." style="border: 3px solid gold;border-radius: 15px;height: 55vw; max-height: 550px; width: 100%; object-fit: cover;">
+            <img src="{{ url_for('static', filename='pexels-houzlook-7515855.jpg') }}" class="d-block w-100" alt="our works img2" style="border: 3px solid gold;border-radius: 15px;height: 75vw; max-height: 560px; width: 100%; object-fit: cover;">
     </div>
     <div class="carousel-item">
-          <img src="{{ url_for('static', filename='pexels-houzlook-7515855.jpg') }}" class="d-block w-100" alt="..." style="border: 3px solid gold;border-radius: 15px;height: 55vw; max-height: 550px; width: 100%; object-fit: cover;">
+          <img src="{{ url_for('static', filename='pexels-houzlook-7515855.jpg') }}" class="d-block w-100" alt="our works img3" style="border: 3px solid gold;border-radius: 15px;height: 75vw; max-height: 560px; width: 100%; object-fit: cover;">
     </div>
   </div>
 
@@ -440,11 +495,11 @@
         <div class="mysel">
         <img src="{{ url_for('static', filename='sakthi.jpeg') }}" alt="sakthi img" class="sakthi">
          
-         <i>" Hi,I'm Sathiyakeerthi, founder of this company. With over 15years of <br>
+         <p class="loc">" Hi,I'm Sathiyakeerthi, founder of this company. With over 15years of <br>
             hands-on experience in interior design and custom<br>
              wood works, I personally oversee every project<br>
               from first sketch to final finish."
-        </i>
+         </p>
         </div>
          
   
@@ -495,14 +550,24 @@
                 <span class="err-msg" id="phoneErr">Enter a valid 10-digit phone number.</span>
             </div>
 
-            <div class="form-group">
-                <label>WhatsApp Number</label>
-                <div class="input-wrap">
-                    <span class="icon"><i class="bi bi-whatsapp"></i></span>
-                    <input type="tel" id="f_whatsapp" placeholder="Same as phone or different"/>
-                </div>
-                <span class="err-msg" id="whatsappErr">Enter a valid WhatsApp number.</span>
-            </div>
+    <!-- Same as phone checkbox-->
+<div style="text-align:left; margin-bottom: 10px; margin-top: -8px;">
+    <input type="checkbox" id="sameAsPhone" 
+           style="width:15px; height:15px; cursor:pointer; accent-color:#6b4f3b; vertical-align:middle;">
+    <label for="sameAsPhone" 
+           style="font-size:0.82rem; color:#9C7B60; font-weight:600; text-transform:uppercase; letter-spacing:1px; cursor:pointer; vertical-align:middle; margin-left:6px;">
+        Same as phone number
+    </label>
+</div>
+
+<div class="form-group">
+    <label>WhatsApp Number</label>
+    <div class="input-wrap">
+        <span class="icon"><i class="bi bi-whatsapp"></i></span>
+        <input type="tel" id="f_whatsapp" placeholder="Same as phone or different"/>
+    </div>
+    <span class="err-msg" id="whatsappErr">Enter a valid WhatsApp number.</span>
+</div>
 
             <button class="submit-btn" id="submitBtn" onclick="submitForm()">
                 <span class="btn-label">Send Request</span>
@@ -566,6 +631,9 @@
         ['nameErr', 'phoneErr', 'whatsappErr'].forEach(id => {
             document.getElementById(id).classList.remove('show');
         });
+
+        sameAsPhone.checked    = false;
+        whatsappInput.disabled = false;
     }
 
     // Clear error as user types
@@ -635,6 +703,31 @@
             btn.classList.remove('loading');
         }
     }
+      // Same as phone checkbox logic
+const phoneInput    = document.getElementById('f_phone');
+const whatsappInput = document.getElementById('f_whatsapp');
+const sameAsPhone   = document.getElementById('sameAsPhone');
+
+sameAsPhone.addEventListener('change', function () {
+    if (this.checked) {
+        whatsappInput.value    = phoneInput.value;
+        whatsappInput.disabled = true;
+    } else {
+        whatsappInput.value    = '';
+        whatsappInput.disabled = false;
+    }
+});
+
+phoneInput.addEventListener('input', function () {
+    if (sameAsPhone.checked) {
+        whatsappInput.value = this.value;
+    }
+});
+
+     
+    
+    
+
 </script>
 
 </body>
